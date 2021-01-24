@@ -22,11 +22,9 @@
   - Ở giữa Map và Reduce thì còn 1 bước trung gian đó chính là **Shuffle**. Sau khi Map hoàn thành  xong công việc của mình thì Shuffle sẽ làm nhiệm vụ chính là thu thập cũng như tổng hợp từ khóa/giá trị trung gian đã được map sinh ra trước đó rồi chuyển qua cho Reduce tiếp tục xử lý.
  ### Nguyên tắc hoạt động 
 Mapreduce hoạt động dựa vào nguyên tắc chính là “Chia để trị”, như sau:
-```
 - Phân chia các dữ liệu cần xử lý thành nhiều phần nhỏ trước khi thực hiện. 
 - Xử lý các vấn đề nhỏ theo phương thức song song trên các máy tính rồi phântán hoạt động theo hướng độc lập.
 - Tiến hành tổng hợp những kết quả thu được để đề ra được kết quả sau cùng. 
-```
 ### Các bước hoạt động của MapReduce
 1. Tiến hành chuẩn bị các dữ liệu đầu vào để cho Map() có thể xử lý.
 2. Lập trình viên thực thi các mã Map() để xử  lý. 
