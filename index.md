@@ -35,7 +35,16 @@ Mapreduce hoạt động dựa vào nguyên tắc chính là “Chia để trị
 Bài toán đếm tần suất từ (word count)
 - Yêu cầu: đếm và trả về 10 từ có tần suất xuất hiện nhiều nhất trong file
 - Khai báo thư viện, đọc file, chuẩn hóa file (lower case, bỏ các dấu câu), xem dòng đầu tiên:
-- Tách file text thành list chứa các từ
-- **map** : Mỗi từ là một cặp khóa (word, 1)
-- **reduce** : hàm reduceByKey duyệt các key có giá trị giống nhau và cộng value của chúng lại
-- xuất kết quả bằng cách dùng **map** đổi vị trí key và value, sau đó sắp xếp giảm dần theo key(tần suất từ) và xuất ra 10 từ có tần suất xuất hiện nhiều nhất
+![image](https://user-images.githubusercontent.com/63109156/105628271-938f7d00-5e6e-11eb-8c1c-a772d7a52ec0.png)
+- Tách file text thành list chứa các từ:
+
+![image](https://user-images.githubusercontent.com/63109156/105628341-e832f800-5e6e-11eb-96c3-30b8bbc08757.png)
+- **map** : Mỗi từ là một cặp khóa (word, 1):
+
+![image](https://user-images.githubusercontent.com/63109156/105628358-fd0f8b80-5e6e-11eb-9f09-ba7b56079877.png)
+- **reduce** : hàm reduceByKey duyệt các key có giá trị giống nhau và cộng value của chúng lại:
+
+![image](https://user-images.githubusercontent.com/63109156/105628373-0e589800-5e6f-11eb-9866-20666e1f0bb5.png)
+- xuất kết quả bằng cách dùng **map** đổi vị trí key và value, sau đó sắp xếp giảm dần theo key(tần suất từ) và xuất ra 10 từ có tần suất xuất hiện nhiều nhất:
+
+![image](https://user-images.githubusercontent.com/63109156/105628385-1fa1a480-5e6f-11eb-8ef8-4765967457e3.png)
